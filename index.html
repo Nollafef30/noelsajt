@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noelsajt</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #111a30;
+            padding: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            border-bottom: 1px solid #263654;
+        }
+
+        header h1 {
+            color: #55b8ff;
+            font-size: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        nav a:hover {
+            color: #55b8ff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: radial-gradient(circle, #1b3760, #0b1020 70%);
+        }
+
+        .hero h2 {
+            font-size: clamp(36px, 7vw, 60px);
+            margin-bottom: 20px;
+        }
+
+        .hero h2 span {
+            color: #55b8ff;
+        }
+
+        .hero p {
+            color: #c3cee0;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #2589e8;
+            color: white;
+            padding: 14px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background: #55b8ff;
+            color: #07101f;
+            transform: translateY(-2px);
+        }
+
+        .section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #141f36;
+            padding: 28px;
+            border-radius: 15px;
+            border: 1px solid #263654;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #55b8ff;
+        }
+
+        .card h3 {
+            color: #55b8ff;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #c3cee0;
+            line-height: 1.6;
+        }
+
+        #meddelande {
+            margin-top: 20px;
+            color: #55b8ff;
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #8c9bb5;
+            border-top: 1px solid #263654;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>⚡ Noelsajt</h1>
+
+        <nav>
+            <a href="#hem">Hem</a>
+            <a href="#om">Om mig</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="hem">
+            <h2>Välkommen till <span>Noelsajt!</span></h2>
+
+            <p>
+                Det här är min egen hemsida.
+                Här kan jag dela mina intressen,
+                projekt och roliga idéer.
+            </p>
+
+            <a href="#om" class="button">Utforska sidan 🚀</a>
+        </section>
+
+        <section class="section" id="om">
+            <h2>Vad finns här?</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>🎮 Mina spel</h3>
+                    <p>Här kan jag skriva om mina favoritspel
+                    och dela mina bästa speltips.</p>
+                </div>
+
+                <div class="card">
+                    <h3>💡 Mina projekt</h3>
+                    <p>Här visar jag saker jag bygger,
+                    skapar och testar.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌟 Om mig</h3>
+                    <p>Här kan jag berätta mer om mig själv
+                    och vad jag gillar.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="kontakt">
+            <h2>Testa knappen!</h2>
+
+            <p>Tryck på knappen för att hälsa på besökaren.</p>
+
+            <br>
+
+            <button class="button" onclick="halsa()">
+                Klicka här 👋
+            </button>
+
+            <p id="meddelande"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Noelsajt | Byggd av Noel 💙</p>
+    </footer>
+
+    <script>
+        function halsa() {
+            document.getElementById("meddelande").textContent =
+                "Tjena! 👋 Välkommen till Noelsajt!";
+        }
+    </script>
+
+</body>
+</html>
